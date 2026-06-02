@@ -1,4 +1,4 @@
-# MediQueue# MediQueue
+# MediQueue
 
 ## Overview
 
