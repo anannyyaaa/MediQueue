@@ -21,45 +21,175 @@
   --sh:0 2px 20px rgba(44,36,22,.07);--sh2:0 6px 32px rgba(44,36,22,.13);
 }
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--beige);color:var(--brown);line-height:1.6;overflow-x:hidden}
-.page{display:none;min-height:100vh}
+body{font-family:'DM Sans',sans-serif;
+     background:var(--beige);
+     color:var(--brown);
+     line-height:1.6;
+     overflow-x:hidden}
+.page{display:none;
+    min-height:100vh}
 .page.active{display:block}
 
 /* NAV */
-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 5%;background:var(--beige);position:sticky;top:0;z-index:200;border-bottom:1px solid var(--beige-deep)}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer}
+nav{display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 5%;
+    background:var(--beige);
+    position:sticky;
+    top:0;
+    z-index:200;
+    border-bottom:1px solid var(--beige-deep)
+}
+.logo{display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    cursor:pointer
+}
 .logo-icon{width:34px;height:34px;background:var(--olive);border-radius:9px;display:flex;align-items:center;justify-content:center}
 .logo-icon svg{width:18px;height:18px}
 .logo-text{font-family:'Fraunces',serif;font-size:21px;font-weight:500;color:var(--brown);letter-spacing:-.3px}
 .nav-links{display:flex;align-items:center;gap:22px}
-.nav-link{font-size:14px;color:var(--brown-mid);text-decoration:none;cursor:pointer;transition:color .2s;background:none;border:none;font-family:'DM Sans',sans-serif;padding:0}
+.nav-link{font-size:14px;color:var(--brown-mid);
+          text-decoration:none;
+          cursor:pointer;
+          transition:color .2s;
+          background:none;
+          border:none;
+          font-family:'DM Sans',sans-serif;padding:0
+        }
 .nav-link:hover{color:var(--olive)}
 .nav-admin-btn{font-size:13px;font-weight:500;color:var(--olive);background:var(--olive-pale);border:1.5px solid rgba(92,107,58,.25);padding:7px 14px;border-radius:var(--rs);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
 .nav-admin-btn:hover{background:var(--olive);color:var(--white)}
 
 /* HERO */
-.hero{padding:64px 5% 0;max-width:740px;margin:0 auto;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--olive-pale);color:var(--olive);font-size:12px;font-weight:500;padding:5px 13px;border-radius:100px;margin-bottom:24px;border:1px solid rgba(92,107,58,.2)}
+.hero{padding:64px 5% 0;
+    max-width:740px;
+    margin:0 auto;
+    text-align:center
+}
+.hero-badge{display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--olive-pale);
+    color:var(--olive);
+    font-size:12px;
+    font-weight:500;
+    padding:5px 13px;
+    border-radius:100px;
+    margin-bottom:24px;
+    border:1px solid rgba(92,107,58,.2)
+}
 .live-dot{width:7px;height:7px;border-radius:50%;background:var(--olive);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 h1{font-family:'Fraunces',serif;font-size:clamp(34px,5.5vw,56px);font-weight:400;line-height:1.1;color:var(--brown);letter-spacing:-1.5px;margin-bottom:16px}
 h1 em{font-style:italic;color:var(--olive)}
 .hero-sub{font-size:16px;color:var(--brown-light);font-weight:300;max-width:460px;margin:0 auto 28px;line-height:1.65}
-.location-bar{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px}
-.loc-pill{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1.5px solid var(--beige-deep);padding:6px 14px;border-radius:100px;font-size:13px;font-weight:500;color:var(--brown);box-shadow:var(--sh)}
-.loc-pill em{color:var(--olive);font-style:normal}
-.loc-change{font-size:12px;color:var(--olive);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
-.search-wrap{position:relative;max-width:500px;margin:0 auto}
-.s-icon{position:absolute;left:17px;top:50%;transform:translateY(-50%);color:var(--brown-light);width:17px;height:17px;pointer-events:none}
-.search-input{width:100%;padding:16px 55px 16px 48px;font-family:'DM Sans',sans-serif;font-size:15px;color:var(--brown);background:var(--white);border:1.5px solid var(--beige-deep);border-radius:13px;outline:none;transition:border-color .2s,box-shadow .2s;box-shadow:var(--sh)}
-.search-input::placeholder{color:var(--brown-light)}
-.search-input:focus{border-color:var(--olive);box-shadow:0 0 0 3px rgba(92,107,58,.12)}
-.search-btn{position:absolute;right:7px;top:50%;transform:translateY(-50%);background:var(--olive);color:var(--white);border:none;border-radius:9px;padding:9px 16px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:background .2s}
-.search-btn:hover{background:var(--olive-light)}
-.stats-strip{display:flex;justify-content:center;gap:36px;padding:28px 5%;background:var(--beige-dark);border-top:1px solid var(--beige-deep);border-bottom:1px solid var(--beige-deep);margin-top:40px;flex-wrap:wrap}
+.location-bar{
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              gap:10px;
+              margin-bottom:18px
+            }
+.loc-pill{display:inline-flex;
+          align-items:center;
+          gap:6px;
+          background:var(--white);
+          border:1.5px solid var(--beige-deep);
+          padding:6px 14px;
+          border-radius:100px;
+          font-size:13px;
+          font-weight:500;
+          color:var(--brown);
+          box-shadow:var(--sh)
+        }
+.loc-pill em{color:var(--olive);
+    font-style:normal
+}
+.loc-change{font-size:12px;
+    color:var(--olive);
+    cursor:pointer;
+    text-decoration:underline;
+    text-underline-offset:2px
+}
+.search-wrap{
+    position:relative;
+    max-width:500px;
+    margin:0 auto;
+}
+
+.s-icon{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    width:17px;
+    height:17px;
+    color:var(--brown-light);
+    pointer-events:none;
+    z-index:2;
+}
+
+.search-input{
+    width:100%;
+    box-sizing:border-box;
+    padding: 60px 95px 16px 50px; /* increased right padding */
+    font-family:'DM Sans',sans-serif;
+    font-size:15px;
+    color:var(--brown);
+    background:var(--white);
+    border:1.5px solid var(--beige-deep);
+    border-radius:13px;
+    outline:none;
+    transition:border-color .2s,box-shadow .2s;
+    box-shadow:var(--sh);
+}
+
+.search-input::placeholder{
+    color:var(--brown-light);
+}
+
+.search-btn{
+    position:absolute;
+    right:8px;
+    top:50%;
+    transform:translateY(-50%);
+    background:var(--olive);
+    color:var(--white);
+    border:none;
+    border-radius:9px;
+    padding:9px 16px;
+    font-size:13px;
+    cursor:pointer;
+}
+.search-input:focus{border-color:var(--olive);
+    box-shadow:0 0 0 3px rgba(92,107,58,.12)
+}
+.search-btn:hover{
+    background:var(--olive-light)
+}
+.stats-strip{display:flex;
+    justify-content:center;
+    gap:36px;
+    padding:28px 5%;
+    background:var(--beige-dark);
+    border-top:1px solid var(--beige-deep);
+    border-bottom:1px solid var(--beige-deep);
+    margin-top:40px;flex-wrap:wrap
+}
 .stat{text-align:center}
-.stat-num{font-family:'Fraunces',serif;font-size:26px;font-weight:400;color:var(--olive);display:block;letter-spacing:-.5px}
-.stat-label{font-size:12px;color:var(--brown-light);font-weight:300}
+.stat-num{font-family:'Fraunces',serif;font-size:26px;
+       font-weight:400;
+       color:var(--olive);
+       display:block;
+       letter-spacing:-.5px
+    }
+.stat-label{font-size:12px;
+    color:var(--brown-light);
+    font-weight:300
+}
 
 /* EMERGENCY BANNER */
 .emg-wrap{padding:28px 5% 0;max-width:1080px;margin:0 auto}
@@ -78,15 +208,32 @@ section{padding:44px 5%;max-width:1080px;margin:0 auto}
 .section-title{font-family:'Fraunces',serif;font-size:30px;font-weight:400;letter-spacing:-.5px;color:var(--brown);margin-bottom:22px}
 .controls-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px;flex-wrap:wrap}
 .filters{display:flex;gap:7px;flex-wrap:wrap}
-.filter-btn{padding:7px 16px;border-radius:100px;border:1.5px solid var(--beige-deep);background:transparent;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:var(--brown-mid);cursor:pointer;transition:all .2s}
+.filter-btn{padding:7px 16px;
+    border-radius:100px;
+    border:1.5px solid var(--beige-deep);
+    background:transparent;
+    font-family:'DM Sans',sans-serif;
+    font-size:12px;
+    font-weight:500;
+    color:var(--brown-mid);
+    cursor:pointer;
+    transition:all .2s
+}
 .filter-btn:hover{border-color:var(--olive);color:var(--olive)}
 .filter-btn.active{background:var(--olive);border-color:var(--olive);color:var(--white)}
 .sort-select{padding:7px 12px;border-radius:var(--rs);border:1.5px solid var(--beige-deep);background:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--brown);outline:none;cursor:pointer}
 .sort-select:focus{border-color:var(--olive)}
 .hospital-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
 .hospital-card{background:var(--white);border-radius:var(--r);padding:22px 22px 18px;border:1.5px solid var(--beige-deep);box-shadow:var(--sh);transition:transform .22s,box-shadow .22s;cursor:pointer;position:relative;overflow:hidden;animation:fadeUp .4s ease both}
-.hospital-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--r) var(--r) 0 0}
-.hospital-card.high::before{background:var(--red)}
+.hospital-card::before{content:'';position:absolute;
+                    top:0;
+                    left:0;
+                    right:0;
+                    height:3px;
+                    border-radius:var(--r) var(--r) 0 0
+                }
+.hospital-card.high::before{background:var(--red)
+}
 .hospital-card.medium::before{background:var(--amber)}
 .hospital-card.low::before{background:var(--green)}
 .hospital-card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
@@ -265,289 +412,937 @@ textarea{resize:vertical;min-height:72px}
 
 footer{padding:26px 5%;text-align:center;font-size:13px;color:var(--brown-light);border-top:1px solid var(--beige-deep);font-weight:300}
 footer span{color:var(--olive);font-weight:500}
-</style>
-</head>
-<body>
-
-<nav>
-  <div class="logo" onclick="goPage('p1')">
-    <div class="logo-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3v14M3 10h14" stroke="#F5F0E8" stroke-width="2.2" stroke-linecap="round"/></svg></div>
-    <span class="logo-text">MediQueue</span>
-  </div>
-  <div class="nav-links">
-    <button class="nav-link" onclick="goPage('p1')">Home</button>
-    <button class="nav-link" onclick="goPage('p3')">Analytics</button>
-    <button class="nav-admin-btn" onclick="goPage('p4-login')">Admin →</button>
-  </div>
-</nav>
-
-<!-- ===== PAGE 1: LANDING ===== -->
-<div id="p1" class="page active">
-  <div class="hero">
-    <div class="hero-badge"><span class="live-dot"></span>Live crowd data · Updated every 15 min</div>
-    <h1>Skip the Queue.<br><em>Check Wait Times</em><br>Before You Leave.</h1>
-    <p class="hero-sub">View real-time crowd levels and estimated waiting times at Delhi's top hospitals — before you step out the door.</p>
+  </style>
+ </head>
+ <body>
+  <nav>
+   <div class="logo" onclick="goPage('p1')">
+    <div class="logo-icon">
+     <svg fill="none" viewbox="0 0 20 20">
+      <path d="M10 3v14M3 10h14" stroke="#F5F0E8" stroke-linecap="round" stroke-width="2.2">
+      </path>
+     </svg>
+    </div>
+    <span class="logo-text">
+     MediQueue
+    </span>
+   </div>
+   <div class="nav-links">
+    <button class="nav-link" onclick="goPage('p1')">
+     Home
+    </button>
+    <button class="nav-link" onclick="goPage('p3')">
+     Analytics
+    </button>
+    <button class="nav-admin-btn" onclick="goPage('p4-login')">
+     Admin →
+    </button>
+   </div>
+  </nav>
+  <!-- ===== PAGE 1: LANDING ===== -->
+  <div class="page active" id="p1">
+   <div class="hero">
+    <div class="hero-badge">
+     <span class="live-dot">
+     </span>
+     Live crowd data · Updated every 15 min
+    </div>
+    <h1>
+     Skip the Queue.
+     <br/>
+     <em>
+      Check Wait Times
+     </em>
+     <br/>
+     Before You Leave.
+    </h1>
+    <p class="hero-sub">
+     View real-time crowd levels and estimated waiting times at Delhi's top hospitals — before you step out the door.
+    </p>
     <div class="location-bar">
-      <div class="loc-pill">📍 <em id="loc-text">East Delhi</em></div>
-      <span class="loc-change" onclick="detectLoc()">Detect my location</span>
+     <div class="loc-pill">
+      📍
+      <em id="loc-text">
+       East Delhi
+      </em>
+     </div>
+     <span class="loc-change" onclick="detectLoc()">
+      Detect my location
+     </span>
     </div>
     <div class="search-wrap">
-      <svg class="s-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M13 13l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      <input type="text" class="search-input" placeholder="Search hospital or area…" id="searchInput" autocomplete="off">
-      <button class="search-btn" onclick="applyFilters()">Search</button>
+     <svg class="s-icon" fill="none" viewbox="0 0 20 20">
+      <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6">
+      </circle>
+      <path d="M13 13l3.5 3.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.6">
+      </path>
+     </svg>
+     <input autocomplete="off" class="search-input" id="searchInput" placeholder="Search hospital or area…" type="text"/>
+     <button class="search-btn" onclick="applyFilters()">
+      Search
+     </button>
     </div>
     <div class="stats-strip">
-      <div class="stat"><span class="stat-num">42</span><span class="stat-label">Hospitals tracked</span></div>
-      <div class="stat"><span class="stat-num">15m</span><span class="stat-label">Data refresh rate</span></div>
-      <div class="stat"><span class="stat-num">94%</span><span class="stat-label">Accuracy rate</span></div>
-      <div class="stat"><span class="stat-num">Delhi</span><span class="stat-label">City coverage</span></div>
+     <div class="stat">
+      <span class="stat-num">
+       42
+      </span>
+      <span class="stat-label">
+       Hospitals tracked
+      </span>
+     </div>
+     <div class="stat">
+      <span class="stat-num">
+       15m
+      </span>
+      <span class="stat-label">
+       Data refresh rate
+      </span>
+     </div>
+     <div class="stat">
+      <span class="stat-num">
+       94%
+      </span>
+      <span class="stat-label">
+       Accuracy rate
+      </span>
+     </div>
+     <div class="stat">
+      <span class="stat-num">
+       Delhi
+      </span>
+      <span class="stat-label">
+       City coverage
+      </span>
+     </div>
     </div>
-  </div>
-
-  <div class="emg-wrap">
+   </div>
+   <div class="emg-wrap">
     <div class="emergency-banner">
-      <div class="emg-left">
-        <div class="emg-icon">🚑</div>
-        <div>
-          <div class="emg-title">Emergency?</div>
-          <div class="emg-name">Nearest Emergency: GTB Hospital</div>
-          <div class="emg-eta">12 mins away · Emergency dept open 24/7 · Low crowd right now</div>
-        </div>
+     <div class="emg-left">
+      <div class="emg-icon">
+       🚑
       </div>
-      <button class="emg-btn" onclick="openHospital('gtb')">View GTB →</button>
+      <div>
+       <div class="emg-title">
+        Emergency?
+       </div>
+       <div class="emg-name">
+        Nearest Emergency: GTB Hospital
+       </div>
+       <div class="emg-eta">
+        12 mins away · Emergency dept open 24/7 · Low crowd right now
+       </div>
+      </div>
+     </div>
+     <button class="emg-btn" onclick="openHospital('gtb')">
+      View GTB →
+     </button>
     </div>
-  </div>
-
-  <section>
-    <p class="section-label">Popular hospitals near you</p>
-    <h2 class="section-title">Find the right hospital now</h2>
+   </div>
+   <section>
+    <p class="section-label">
+     Popular hospitals near you
+    </p>
+    <h2 class="section-title">
+     Find the right hospital now
+    </h2>
     <div class="controls-bar">
-      <div class="filters">
-        <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
-        <button class="filter-btn" onclick="setFilter('low',this)">🟢 Low Wait</button>
-        <button class="filter-btn" onclick="setFilter('medium',this)">🟡 Medium</button>
-        <button class="filter-btn" onclick="setFilter('high',this)">🔴 High Crowd</button>
-      </div>
-      <select class="sort-select" id="sortSel" onchange="applyFilters()">
-        <option value="default">Sort By</option>
-        <option value="wait">Lowest Wait Time</option>
-        <option value="nearest">Nearest</option>
-        <option value="crowd">Least Crowded</option>
-      </select>
+     <div class="filters">
+      <button class="filter-btn active" onclick="setFilter('all',this)">
+       All
+      </button>
+      <button class="filter-btn" onclick="setFilter('low',this)">
+       🟢 Low Wait
+      </button>
+      <button class="filter-btn" onclick="setFilter('medium',this)">
+       🟡 Medium
+      </button>
+      <button class="filter-btn" onclick="setFilter('high',this)">
+       🔴 High Crowd
+      </button>
+     </div>
+     <select class="sort-select" id="sortSel" onchange="applyFilters()">
+      <option value="default">
+       Sort By
+      </option>
+      <option value="wait">
+       Lowest Wait Time
+      </option>
+      <option value="nearest">
+       Nearest
+      </option>
+      <option value="crowd">
+       Least Crowded
+      </option>
+     </select>
     </div>
-    <div class="hospital-grid" id="hospitalGrid"></div>
-    <div class="no-results" id="noResults">No hospitals found. Try a different search term.</div>
-  </section>
-
-  <div class="how-section">
+    <div class="hospital-grid" id="hospitalGrid">
+    </div>
+    <div class="no-results" id="noResults">
+     No hospitals found. Try a different search term.
+    </div>
+   </section>
+   <div class="how-section">
     <div class="how-inner">
-      <p class="section-label">How it works</p>
-      <h2 class="section-title">Three steps to save your time</h2>
-      <div class="steps-grid">
-        <div class="step-card"><div class="step-num">01</div><div class="step-title">Search a hospital</div><p class="step-desc">Type any hospital name or area in Delhi to instantly see its current crowd status.</p></div>
-        <div class="step-card"><div class="step-num">02</div><div class="step-title">Check the wait time</div><p class="step-desc">Each card shows estimated wait and real-time crowd level — colour coded for a quick read.</p></div>
-        <div class="step-card"><div class="step-num">03</div><div class="step-title">Visit at the right time</div><p class="step-desc">Pick the hospital with the shortest queue, then head out. No surprises when you arrive.</p></div>
-        <div class="step-card"><div class="step-num">04</div><div class="step-title">Save favourites</div><p class="step-desc">Star your most-visited hospitals for instant access every time you open MediQueue.</p></div>
+     <p class="section-label">
+      How it works
+     </p>
+     <h2 class="section-title">
+      Three steps to save your time
+     </h2>
+     <div class="steps-grid">
+      <div class="step-card">
+       <div class="step-num">
+        01
+       </div>
+       <div class="step-title">
+        Search a hospital
+       </div>
+       <p class="step-desc">
+        Type any hospital name or area in Delhi to instantly see its current crowd status.
+       </p>
       </div>
+      <div class="step-card">
+       <div class="step-num">
+        02
+       </div>
+       <div class="step-title">
+        Check the wait time
+       </div>
+       <p class="step-desc">
+        Each card shows estimated wait and real-time crowd level — colour coded for a quick read.
+       </p>
+      </div>
+      <div class="step-card">
+       <div class="step-num">
+        03
+       </div>
+       <div class="step-title">
+        Visit at the right time
+       </div>
+       <p class="step-desc">
+        Pick the hospital with the shortest queue, then head out. No surprises when you arrive.
+       </p>
+      </div>
+      <div class="step-card">
+       <div class="step-num">
+        04
+       </div>
+       <div class="step-title">
+        Save favourites
+       </div>
+       <p class="step-desc">
+        Star your most-visited hospitals for instant access every time you open MediQueue.
+       </p>
+      </div>
+     </div>
     </div>
+   </div>
+   <footer>
+    Built for Delhi's patients ·
+    <span>
+     MediQueue
+    </span>
+    · A placement project
+   </footer>
   </div>
-  <footer>Built for Delhi's patients · <span>MediQueue</span> · A placement project</footer>
-</div>
-
-<!-- ===== PAGE 2: HOSPITAL DETAILS ===== -->
-<div id="p2" class="page">
-  <button class="back-btn" onclick="goPage('p1')">← Back to hospitals</button>
-  <div class="detail-wrap" id="detail-wrap"></div>
-  <footer>Built for Delhi's patients · <span>MediQueue</span></footer>
-</div>
-
-<!-- ===== PAGE 3: ANALYTICS ===== -->
-<div id="p3" class="page">
-  <div class="analytics-wrap">
-    <p class="section-label" style="padding-top:4px">Queue Analytics</p>
-    <h2 class="section-title" style="margin-bottom:6px">Delhi Hospital Insights</h2>
-    <p style="font-size:14px;color:var(--brown-light);margin-bottom:30px">Aggregate data across all tracked hospitals in Delhi NCR</p>
-
+  <!-- ===== PAGE 2: HOSPITAL DETAILS ===== -->
+  <div class="page" id="p2">
+   <button class="back-btn" onclick="goPage('p1')">
+    ← Back to hospitals
+   </button>
+   <div class="detail-wrap" id="detail-wrap">
+   </div>
+   <footer>
+    Built for Delhi's patients ·
+    <span>
+     MediQueue
+    </span>
+   </footer>
+  </div>
+  <!-- ===== PAGE 3: ANALYTICS ===== -->
+  <div class="page" id="p3">
+   <div class="analytics-wrap">
+    <p class="section-label" style="padding-top:4px">
+     Queue Analytics
+    </p>
+    <h2 class="section-title" style="margin-bottom:6px">
+     Delhi Hospital Insights
+    </h2>
+    <p style="font-size:14px;color:var(--brown-light);margin-bottom:30px">
+     Aggregate data across all tracked hospitals in Delhi NCR
+    </p>
     <div class="chart-grid">
-      <div class="chart-card full">
-        <div class="chart-title">7-Day Average Wait Time Trend</div>
-        <div class="chart-sub">All hospitals combined · minutes</div>
-        <div class="chart-wrap"><canvas id="chart-trend"></canvas></div>
+     <div class="chart-card full">
+      <div class="chart-title">
+       7-Day Average Wait Time Trend
       </div>
-
-      <div class="chart-card">
-        <div class="chart-title">Today's Crowd Distribution</div>
-        <div class="chart-sub">Proportion of hospitals by crowd level</div>
-        <div class="chart-wrap" style="height:180px"><canvas id="chart-donut"></canvas></div>
+      <div class="chart-sub">
+       All hospitals combined · minutes
       </div>
-
-      <div class="chart-card">
-        <div class="chart-title">Department Wait Times</div>
-        <div class="chart-sub">Shortest vs longest queues right now</div>
-        <div class="dept-compare-grid">
-          <div class="dc-card best"><div class="dc-lbl">Shortest Queue</div><div class="dc-name">Dermatology</div><div class="dc-wait">15 min</div></div>
-          <div class="dc-card worst"><div class="dc-lbl">Longest Queue</div><div class="dc-name">Cardiology</div><div class="dc-wait">120 min</div></div>
+      <div class="chart-wrap">
+       <canvas id="chart-trend">
+       </canvas>
+      </div>
+     </div>
+     <div class="chart-card">
+      <div class="chart-title">
+       Today's Crowd Distribution
+      </div>
+      <div class="chart-sub">
+       Proportion of hospitals by crowd level
+      </div>
+      <div class="chart-wrap" style="height:180px">
+       <canvas id="chart-donut">
+       </canvas>
+      </div>
+     </div>
+     <div class="chart-card">
+      <div class="chart-title">
+       Department Wait Times
+      </div>
+      <div class="chart-sub">
+       Shortest vs longest queues right now
+      </div>
+      <div class="dept-compare-grid">
+       <div class="dc-card best">
+        <div class="dc-lbl">
+         Shortest Queue
         </div>
-        <div class="hcr-row"><span class="hcr-name">Dermatology</span><div class="hcr-bar-wrap"><div class="hcr-bar" style="width:12%;background:var(--green)"></div></div><span class="hcr-wait" style="color:var(--green)">15 min</span></div>
-        <div class="hcr-row"><span class="hcr-name">Orthopaedic</span><div class="hcr-bar-wrap"><div class="hcr-bar" style="width:25%;background:var(--green)"></div></div><span class="hcr-wait" style="color:var(--green)">30 min</span></div>
-        <div class="hcr-row"><span class="hcr-name">General OPD</span><div class="hcr-bar-wrap"><div class="hcr-bar" style="width:37%;background:var(--amber)"></div></div><span class="hcr-wait" style="color:var(--amber)">45 min</span></div>
-        <div class="hcr-row"><span class="hcr-name">Neurology</span><div class="hcr-bar-wrap"><div class="hcr-bar" style="width:50%;background:var(--amber)"></div></div><span class="hcr-wait" style="color:var(--amber)">60 min</span></div>
-        <div class="hcr-row"><span class="hcr-name">Cardiology</span><div class="hcr-bar-wrap"><div class="hcr-bar" style="width:98%;background:var(--red)"></div></div><span class="hcr-wait" style="color:var(--red)">120 min</span></div>
+        <div class="dc-name">
+         Dermatology
+        </div>
+        <div class="dc-wait">
+         15 min
+        </div>
+       </div>
+       <div class="dc-card worst">
+        <div class="dc-lbl">
+         Longest Queue
+        </div>
+        <div class="dc-name">
+         Cardiology
+        </div>
+        <div class="dc-wait">
+         120 min
+        </div>
+       </div>
       </div>
-
-      <div class="chart-card full">
-        <div class="chart-title">Hospital-wise Current Wait Times</div>
-        <div class="chart-sub">Average wait in minutes right now · colour = crowd level</div>
-        <div class="chart-wrap" style="height:220px"><canvas id="chart-hospitals"></canvas></div>
+      <div class="hcr-row">
+       <span class="hcr-name">
+        Dermatology
+       </span>
+       <div class="hcr-bar-wrap">
+        <div class="hcr-bar" style="width:12%;background:var(--green)">
+        </div>
+       </div>
+       <span class="hcr-wait" style="color:var(--green)">
+        15 min
+       </span>
       </div>
+      <div class="hcr-row">
+       <span class="hcr-name">
+        Orthopaedic
+       </span>
+       <div class="hcr-bar-wrap">
+        <div class="hcr-bar" style="width:25%;background:var(--green)">
+        </div>
+       </div>
+       <span class="hcr-wait" style="color:var(--green)">
+        30 min
+       </span>
+      </div>
+      <div class="hcr-row">
+       <span class="hcr-name">
+        General OPD
+       </span>
+       <div class="hcr-bar-wrap">
+        <div class="hcr-bar" style="width:37%;background:var(--amber)">
+        </div>
+       </div>
+       <span class="hcr-wait" style="color:var(--amber)">
+        45 min
+       </span>
+      </div>
+      <div class="hcr-row">
+       <span class="hcr-name">
+        Neurology
+       </span>
+       <div class="hcr-bar-wrap">
+        <div class="hcr-bar" style="width:50%;background:var(--amber)">
+        </div>
+       </div>
+       <span class="hcr-wait" style="color:var(--amber)">
+        60 min
+       </span>
+      </div>
+      <div class="hcr-row">
+       <span class="hcr-name">
+        Cardiology
+       </span>
+       <div class="hcr-bar-wrap">
+        <div class="hcr-bar" style="width:98%;background:var(--red)">
+        </div>
+       </div>
+       <span class="hcr-wait" style="color:var(--red)">
+        120 min
+       </span>
+      </div>
+     </div>
+     <div class="chart-card full">
+      <div class="chart-title">
+       Hospital-wise Current Wait Times
+      </div>
+      <div class="chart-sub">
+       Average wait in minutes right now · colour = crowd level
+      </div>
+      <div class="chart-wrap" style="height:220px">
+       <canvas id="chart-hospitals">
+       </canvas>
+      </div>
+     </div>
     </div>
+   </div>
+   <footer>
+    Built for Delhi's patients ·
+    <span>
+     MediQueue
+    </span>
+   </footer>
   </div>
-  <footer>Built for Delhi's patients · <span>MediQueue</span></footer>
-</div>
-
-<!-- ===== PAGE 4: ADMIN LOGIN ===== -->
-<div id="p4-login" class="page">
-  <div class="login-wrap">
+  <!-- ===== PAGE 4: ADMIN LOGIN ===== -->
+  <div class="page" id="p4-login">
+   <div class="login-wrap">
     <div class="login-card">
-      <div class="login-title">Admin Login</div>
-      <p class="login-sub">Hospital staff portal for updating queue data</p>
-      <div class="login-form">
-        <div class="fg">
-          <label>Email</label>
-          <input type="text" placeholder="admin@hospital.gov.in">
-        </div>
-        <div class="fg">
-          <label>Password</label>
-          <input type="text" placeholder="••••••••">
-          <span class="hint">Demo mode — any credentials work</span>
-        </div>
-        <button class="submit-btn" style="margin-top:8px" onclick="goPage('p4')">Sign In →</button>
+     <div class="login-title">
+      Admin Login
+     </div>
+     <p class="login-sub">
+      Hospital staff portal for updating queue data
+     </p>
+     <div class="login-form">
+      <div class="fg">
+       <label>
+        Email
+       </label>
+       <input placeholder="admin@hospital.gov.in" type="text"/>
       </div>
+      <div class="fg">
+       <label>
+        Password
+       </label>
+       <input placeholder="••••••••" type="text"/>
+       <span class="hint">
+        Demo mode — any credentials work
+       </span>
+      </div>
+      <button class="submit-btn" onclick="goPage('p4')" style="margin-top:8px">
+       Sign In →
+      </button>
+     </div>
     </div>
+   </div>
   </div>
-</div>
-
-<!-- ===== PAGE 4: ADMIN DASHBOARD ===== -->
-<div id="p4" class="page">
-  <div class="admin-layout">
+  <!-- ===== PAGE 4: ADMIN DASHBOARD ===== -->
+  <div class="page" id="p4">
+   <div class="admin-layout">
     <div class="admin-sidebar">
-      <div class="sb-top"><div class="sb-name">MediQueue Admin</div><div class="sb-role">Delhi Operations</div></div>
-      <div class="sb-section">
-        <div class="sb-lbl">Overview</div>
-        <button class="sb-item active" onclick="adminTab('overview',this)">
-          <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.4"/><rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.4"/><rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.4"/><rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.4"/></svg>
-          Dashboard
-        </button>
-        <button class="sb-item" onclick="adminTab('update',this)">
-          <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.4"/><path d="M8 5v3l2 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          Update Queue Data
-        </button>
+     <div class="sb-top">
+      <div class="sb-name">
+       MediQueue Admin
       </div>
-      <div class="sb-section">
-        <div class="sb-lbl">Hospitals</div>
-        <button class="sb-item" onclick="adminTab('manage',this)">
-          <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="9" rx="1" stroke="currentColor" stroke-width="1.4"/><path d="M5 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.4"/></svg>
-          Manage Hospitals
-        </button>
-        <button class="sb-item" onclick="adminTab('add',this)">
-          <svg viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          Add Hospital
-        </button>
+      <div class="sb-role">
+       Delhi Operations
       </div>
-      <div class="sb-section" style="margin-top:16px">
-        <button class="sb-item" onclick="goPage('p1')">
-          <svg viewBox="0 0 16 16" fill="none"><path d="M6 12L2 8l4-4M2 8h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Back to Site
-        </button>
+     </div>
+     <div class="sb-section">
+      <div class="sb-lbl">
+       Overview
       </div>
+      <button class="sb-item active" onclick="adminTab('overview',this)">
+       <svg fill="none" viewbox="0 0 16 16">
+        <rect height="5" rx="1" stroke="currentColor" stroke-width="1.4" width="5" x="2" y="2">
+        </rect>
+        <rect height="5" rx="1" stroke="currentColor" stroke-width="1.4" width="5" x="9" y="2">
+        </rect>
+        <rect height="5" rx="1" stroke="currentColor" stroke-width="1.4" width="5" x="2" y="9">
+        </rect>
+        <rect height="5" rx="1" stroke="currentColor" stroke-width="1.4" width="5" x="9" y="9">
+        </rect>
+       </svg>
+       Dashboard
+      </button>
+      <button class="sb-item" onclick="adminTab('update',this)">
+       <svg fill="none" viewbox="0 0 16 16">
+        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.4">
+        </circle>
+        <path d="M8 5v3l2 1" stroke="currentColor" stroke-linecap="round" stroke-width="1.4">
+        </path>
+       </svg>
+       Update Queue Data
+      </button>
+     </div>
+     <div class="sb-section">
+      <div class="sb-lbl">
+       Hospitals
+      </div>
+      <button class="sb-item" onclick="adminTab('manage',this)">
+       <svg fill="none" viewbox="0 0 16 16">
+        <rect height="9" rx="1" stroke="currentColor" stroke-width="1.4" width="12" x="2" y="4">
+        </rect>
+        <path d="M5 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.4">
+        </path>
+       </svg>
+       Manage Hospitals
+      </button>
+      <button class="sb-item" onclick="adminTab('add',this)">
+       <svg fill="none" viewbox="0 0 16 16">
+        <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-linecap="round" stroke-width="1.4">
+        </path>
+       </svg>
+       Add Hospital
+      </button>
+     </div>
+     <div class="sb-section" style="margin-top:16px">
+      <button class="sb-item" onclick="goPage('p1')">
+       <svg fill="none" viewbox="0 0 16 16">
+        <path d="M6 12L2 8l4-4M2 8h12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4">
+        </path>
+       </svg>
+       Back to Site
+      </button>
+     </div>
     </div>
-
     <div class="admin-main">
-      <!-- OVERVIEW -->
-      <div id="atab-overview">
-        <div class="admin-title">Dashboard Overview</div>
-        <div class="admin-sub">Live summary across all monitored hospitals in Delhi</div>
-        <div class="admin-stats">
-          <div class="admin-stat"><span class="admin-stat-num">6</span><span class="admin-stat-lbl">Active hospitals</span></div>
-          <div class="admin-stat"><span class="admin-stat-num">534</span><span class="admin-stat-lbl">Patients today</span></div>
-          <div class="admin-stat"><span class="admin-stat-num">55 min</span><span class="admin-stat-lbl">Avg wait time</span></div>
-          <div class="admin-stat"><span class="admin-stat-num">2</span><span class="admin-stat-lbl">High crowd alerts 🔴</span></div>
-        </div>
-        <div class="form-card">
-          <div class="fc-title">Hospital Status Summary</div>
-          <div class="list-wrap">
-            <div class="hlt-row"><span class="hlt-name">GTB Hospital</span><span class="hlt-badge" style="background:var(--green-bg);color:var(--green)">Low · 20 min</span><div class="hlt-actions"><button class="hlt-edit" onclick="adminTab('update',null);showToast('Editing GTB Hospital')">Edit</button></div></div>
-            <div class="hlt-row"><span class="hlt-name">Safdarjung Hospital</span><span class="hlt-badge" style="background:var(--amber-bg);color:var(--amber)">Medium · 45 min</span><div class="hlt-actions"><button class="hlt-edit">Edit</button></div></div>
-            <div class="hlt-row"><span class="hlt-name">AIIMS Delhi</span><span class="hlt-badge" style="background:var(--red-bg);color:var(--red)">High · 90 min</span><div class="hlt-actions"><button class="hlt-edit">Edit</button></div></div>
-            <div class="hlt-row"><span class="hlt-name">LBS Hospital</span><span class="hlt-badge" style="background:var(--green-bg);color:var(--green)">Low · 18 min</span><div class="hlt-actions"><button class="hlt-edit">Edit</button></div></div>
-            <div class="hlt-row"><span class="hlt-name">RML Hospital</span><span class="hlt-badge" style="background:var(--amber-bg);color:var(--amber)">Medium · 55 min</span><div class="hlt-actions"><button class="hlt-edit">Edit</button></div></div>
-            <div class="hlt-row"><span class="hlt-name">Lok Nayak Hospital</span><span class="hlt-badge" style="background:var(--red-bg);color:var(--red)">High · 75 min</span><div class="hlt-actions"><button class="hlt-edit">Edit</button></div></div>
-          </div>
-        </div>
+     <!-- OVERVIEW -->
+     <div id="atab-overview">
+      <div class="admin-title">
+       Dashboard Overview
       </div>
-
-      <!-- UPDATE QUEUE -->
-      <div id="atab-update" style="display:none">
-        <div class="admin-title">Update Queue Data</div>
-        <div class="admin-sub">Manually update current patient counts and wait times</div>
-        <div class="form-card">
-          <div class="fc-title">Queue Update Form</div>
-          <div class="form-grid">
-            <div class="fg"><label>Hospital</label><select><option>AIIMS Delhi</option><option>Safdarjung Hospital</option><option>GTB Hospital</option><option>LBS Hospital</option><option>RML Hospital</option><option>Lok Nayak Hospital</option></select></div>
-            <div class="fg"><label>Department</label><select><option>General OPD</option><option>Cardiology</option><option>Orthopaedic</option><option>Neurology</option><option>Dermatology</option><option>Emergency</option><option>Trauma</option></select></div>
-            <div class="fg"><label>Current Patients</label><input type="number" placeholder="e.g. 212" min="0"></div>
-            <div class="fg"><label>Average Wait Time (min)</label><input type="number" placeholder="e.g. 90" min="0"></div>
-            <div class="fg"><label>Crowd Level</label><select><option>Low</option><option>Medium</option><option>High</option></select></div>
-            <div class="fg"><label>Doctors on Duty</label><input type="number" placeholder="e.g. 8" min="0"></div>
-            <div class="fg fg-full"><label>Notes (optional)</label><textarea placeholder="Any alerts or announcements for patients…"></textarea></div>
-          </div>
-          <div style="margin-top:16px;display:flex;gap:12px;align-items:center">
-            <button class="submit-btn" onclick="showToast('Queue data updated successfully!')">Update Queue →</button>
-            <span style="font-size:12px;color:var(--brown-light)">Last updated: 5 mins ago</span>
-          </div>
-        </div>
+      <div class="admin-sub">
+       Live summary across all monitored hospitals in Delhi
       </div>
-
-      <!-- MANAGE -->
-      <div id="atab-manage" style="display:none">
-        <div class="admin-title">Manage Hospitals</div>
-        <div class="admin-sub">Edit or remove hospitals from the public directory</div>
-        <div class="list-wrap">
-          <div class="hlt-row"><span class="hlt-name">GTB Hospital</span><span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">Active</span><div class="hlt-actions"><button class="hlt-edit" onclick="showToast('Editing GTB Hospital')">Edit</button><button class="hlt-del" onclick="showToast('Hospital removed from directory')">Delete</button></div></div>
-          <div class="hlt-row"><span class="hlt-name">Safdarjung Hospital</span><span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">Active</span><div class="hlt-actions"><button class="hlt-edit">Edit</button><button class="hlt-del">Delete</button></div></div>
-          <div class="hlt-row"><span class="hlt-name">AIIMS Delhi</span><span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">Active</span><div class="hlt-actions"><button class="hlt-edit">Edit</button><button class="hlt-del">Delete</button></div></div>
-          <div class="hlt-row"><span class="hlt-name">LBS Hospital</span><span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">Active</span><div class="hlt-actions"><button class="hlt-edit">Edit</button><button class="hlt-del">Delete</button></div></div>
-          <div class="hlt-row"><span class="hlt-name">RML Hospital</span><span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">Active</span><div class="hlt-actions"><button class="hlt-edit">Edit</button><button class="hlt-del">Delete</button></div></div>
-          <div class="hlt-row"><span class="hlt-name">Lok Nayak Hospital</span><span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">Active</span><div class="hlt-actions"><button class="hlt-edit">Edit</button><button class="hlt-del">Delete</button></div></div>
-        </div>
+      <div class="admin-stats">
+       <div class="admin-stat">
+        <span class="admin-stat-num">
+         6
+        </span>
+        <span class="admin-stat-lbl">
+         Active hospitals
+        </span>
+       </div>
+       <div class="admin-stat">
+        <span class="admin-stat-num">
+         534
+        </span>
+        <span class="admin-stat-lbl">
+         Patients today
+        </span>
+       </div>
+       <div class="admin-stat">
+        <span class="admin-stat-num">
+         55 min
+        </span>
+        <span class="admin-stat-lbl">
+         Avg wait time
+        </span>
+       </div>
+       <div class="admin-stat">
+        <span class="admin-stat-num">
+         2
+        </span>
+        <span class="admin-stat-lbl">
+         High crowd alerts 🔴
+        </span>
+       </div>
       </div>
-
-      <!-- ADD -->
-      <div id="atab-add" style="display:none">
-        <div class="admin-title">Add New Hospital</div>
-        <div class="admin-sub">Add a new hospital to the MediQueue directory</div>
-        <div class="form-card">
-          <div class="fc-title">Hospital Information</div>
-          <div class="form-grid">
-            <div class="fg fg-full"><label>Hospital Name</label><input type="text" placeholder="e.g. Deen Dayal Upadhyay Hospital"></div>
-            <div class="fg"><label>Area / Zone</label><input type="text" placeholder="e.g. West Delhi"></div>
-            <div class="fg"><label>Pincode</label><input type="text" placeholder="e.g. 110015"></div>
-            <div class="fg"><label>Total Beds</label><input type="number" placeholder="e.g. 1500"></div>
-            <div class="fg"><label>Emergency Available</label><select><option>Yes</option><option>No</option></select></div>
-            <div class="fg fg-full"><label>Departments (comma separated)</label><input type="text" placeholder="General OPD, Cardiology, Orthopaedic, Neurology…"></div>
-            <div class="fg fg-full"><label>Full Address</label><textarea placeholder="Complete hospital address including landmark…" style="min-height:64px"></textarea></div>
-          </div>
-          <div style="margin-top:16px">
-            <button class="submit-btn" onclick="showToast('Hospital added to directory!')">Add Hospital →</button>
-          </div>
+      <div class="form-card">
+       <div class="fc-title">
+        Hospital Status Summary
+       </div>
+       <div class="list-wrap">
+        <div class="hlt-row">
+         <span class="hlt-name">
+          GTB Hospital
+         </span>
+         <span class="hlt-badge" style="background:var(--green-bg);color:var(--green)">
+          Low · 20 min
+         </span>
+         <div class="hlt-actions">
+          <button class="hlt-edit" onclick="adminTab('update',null);showToast('Editing GTB Hospital')">
+           Edit
+          </button>
+         </div>
         </div>
+        <div class="hlt-row">
+         <span class="hlt-name">
+          Safdarjung Hospital
+         </span>
+         <span class="hlt-badge" style="background:var(--amber-bg);color:var(--amber)">
+          Medium · 45 min
+         </span>
+         <div class="hlt-actions">
+          <button class="hlt-edit">
+           Edit
+          </button>
+         </div>
+        </div>
+        <div class="hlt-row">
+         <span class="hlt-name">
+          AIIMS Delhi
+         </span>
+         <span class="hlt-badge" style="background:var(--red-bg);color:var(--red)">
+          High · 90 min
+         </span>
+         <div class="hlt-actions">
+          <button class="hlt-edit">
+           Edit
+          </button>
+         </div>
+        </div>
+        <div class="hlt-row">
+         <span class="hlt-name">
+          LBS Hospital
+         </span>
+         <span class="hlt-badge" style="background:var(--green-bg);color:var(--green)">
+          Low · 18 min
+         </span>
+         <div class="hlt-actions">
+          <button class="hlt-edit">
+           Edit
+          </button>
+         </div>
+        </div>
+        <div class="hlt-row">
+         <span class="hlt-name">
+          RML Hospital
+         </span>
+         <span class="hlt-badge" style="background:var(--amber-bg);color:var(--amber)">
+          Medium · 55 min
+         </span>
+         <div class="hlt-actions">
+          <button class="hlt-edit">
+           Edit
+          </button>
+         </div>
+        </div>
+        <div class="hlt-row">
+         <span class="hlt-name">
+          Lok Nayak Hospital
+         </span>
+         <span class="hlt-badge" style="background:var(--red-bg);color:var(--red)">
+          High · 75 min
+         </span>
+         <div class="hlt-actions">
+          <button class="hlt-edit">
+           Edit
+          </button>
+         </div>
+        </div>
+       </div>
       </div>
+     </div>
+     <!-- UPDATE QUEUE -->
+     <div id="atab-update" style="display:none">
+      <div class="admin-title">
+       Update Queue Data
+      </div>
+      <div class="admin-sub">
+       Manually update current patient counts and wait times
+      </div>
+      <div class="form-card">
+       <div class="fc-title">
+        Queue Update Form
+       </div>
+       <div class="form-grid">
+        <div class="fg">
+         <label>
+          Hospital
+         </label>
+         <select>
+          <option>
+           AIIMS Delhi
+          </option>
+          <option>
+           Safdarjung Hospital
+          </option>
+          <option>
+           GTB Hospital
+          </option>
+          <option>
+           LBS Hospital
+          </option>
+          <option>
+           RML Hospital
+          </option>
+          <option>
+           Lok Nayak Hospital
+          </option>
+         </select>
+        </div>
+        <div class="fg">
+         <label>
+          Department
+         </label>
+         <select>
+          <option>
+           General OPD
+          </option>
+          <option>
+           Cardiology
+          </option>
+          <option>
+           Orthopaedic
+          </option>
+          <option>
+           Neurology
+          </option>
+          <option>
+           Dermatology
+          </option>
+          <option>
+           Emergency
+          </option>
+          <option>
+           Trauma
+          </option>
+         </select>
+        </div>
+        <div class="fg">
+         <label>
+          Current Patients
+         </label>
+         <input min="0" placeholder="e.g. 212" type="number"/>
+        </div>
+        <div class="fg">
+         <label>
+          Average Wait Time (min)
+         </label>
+         <input min="0" placeholder="e.g. 90" type="number"/>
+        </div>
+        <div class="fg">
+         <label>
+          Crowd Level
+         </label>
+         <select>
+          <option>
+           Low
+          </option>
+          <option>
+           Medium
+          </option>
+          <option>
+           High
+          </option>
+         </select>
+        </div>
+        <div class="fg">
+         <label>
+          Doctors on Duty
+         </label>
+         <input min="0" placeholder="e.g. 8" type="number"/>
+        </div>
+        <div class="fg fg-full">
+         <label>
+          Notes (optional)
+         </label>
+         <textarea placeholder="Any alerts or announcements for patients…"></textarea>
+        </div>
+       </div>
+       <div style="margin-top:16px;display:flex;gap:12px;align-items:center">
+        <button class="submit-btn" onclick="showToast('Queue data updated successfully!')">
+         Update Queue →
+        </button>
+        <span style="font-size:12px;color:var(--brown-light)">
+         Last updated: 5 mins ago
+        </span>
+       </div>
+      </div>
+     </div>
+     <!-- MANAGE -->
+     <div id="atab-manage" style="display:none">
+      <div class="admin-title">
+       Manage Hospitals
+      </div>
+      <div class="admin-sub">
+       Edit or remove hospitals from the public directory
+      </div>
+      <div class="list-wrap">
+       <div class="hlt-row">
+        <span class="hlt-name">
+         GTB Hospital
+        </span>
+        <span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">
+         Active
+        </span>
+        <div class="hlt-actions">
+         <button class="hlt-edit" onclick="showToast('Editing GTB Hospital')">
+          Edit
+         </button>
+         <button class="hlt-del" onclick="showToast('Hospital removed from directory')">
+          Delete
+         </button>
+        </div>
+       </div>
+       <div class="hlt-row">
+        <span class="hlt-name">
+         Safdarjung Hospital
+        </span>
+        <span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">
+         Active
+        </span>
+        <div class="hlt-actions">
+         <button class="hlt-edit">
+          Edit
+         </button>
+         <button class="hlt-del">
+          Delete
+         </button>
+        </div>
+       </div>
+       <div class="hlt-row">
+        <span class="hlt-name">
+         AIIMS Delhi
+        </span>
+        <span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">
+         Active
+        </span>
+        <div class="hlt-actions">
+         <button class="hlt-edit">
+          Edit
+         </button>
+         <button class="hlt-del">
+          Delete
+         </button>
+        </div>
+       </div>
+       <div class="hlt-row">
+        <span class="hlt-name">
+         LBS Hospital
+        </span>
+        <span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">
+         Active
+        </span>
+        <div class="hlt-actions">
+         <button class="hlt-edit">
+          Edit
+         </button>
+         <button class="hlt-del">
+          Delete
+         </button>
+        </div>
+       </div>
+       <div class="hlt-row">
+        <span class="hlt-name">
+         RML Hospital
+        </span>
+        <span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">
+         Active
+        </span>
+        <div class="hlt-actions">
+         <button class="hlt-edit">
+          Edit
+         </button>
+         <button class="hlt-del">
+          Delete
+         </button>
+        </div>
+       </div>
+       <div class="hlt-row">
+        <span class="hlt-name">
+         Lok Nayak Hospital
+        </span>
+        <span class="hlt-badge" style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:100px">
+         Active
+        </span>
+        <div class="hlt-actions">
+         <button class="hlt-edit">
+          Edit
+         </button>
+         <button class="hlt-del">
+          Delete
+         </button>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- ADD -->
+     <div id="atab-add" style="display:none">
+      <div class="admin-title">
+       Add New Hospital
+      </div>
+      <div class="admin-sub">
+       Add a new hospital to the MediQueue directory
+      </div>
+      <div class="form-card">
+       <div class="fc-title">
+        Hospital Information
+       </div>
+       <div class="form-grid">
+        <div class="fg fg-full">
+         <label>
+          Hospital Name
+         </label>
+         <input placeholder="e.g. Deen Dayal Upadhyay Hospital" type="text"/>
+        </div>
+        <div class="fg">
+         <label>
+          Area / Zone
+         </label>
+         <input placeholder="e.g. West Delhi" type="text"/>
+        </div>
+        <div class="fg">
+         <label>
+          Pincode
+         </label>
+         <input placeholder="e.g. 110015" type="text"/>
+        </div>
+        <div class="fg">
+         <label>
+          Total Beds
+         </label>
+         <input placeholder="e.g. 1500" type="number"/>
+        </div>
+        <div class="fg">
+         <label>
+          Emergency Available
+         </label>
+         <select>
+          <option>
+           Yes
+          </option>
+          <option>
+           No
+          </option>
+         </select>
+        </div>
+        <div class="fg fg-full">
+         <label>
+          Departments (comma separated)
+         </label>
+         <input placeholder="General OPD, Cardiology, Orthopaedic, Neurology…" type="text"/>
+        </div>
+        <div class="fg fg-full">
+         <label>
+          Full Address
+         </label>
+         <textarea placeholder="Complete hospital address including landmark…" style="min-height:64px"></textarea>
+        </div>
+       </div>
+       <div style="margin-top:16px">
+        <button class="submit-btn" onclick="showToast('Hospital added to directory!')">
+         Add Hospital →
+        </button>
+       </div>
+      </div>
+     </div>
     </div>
+   </div>
   </div>
-</div>
-
-<div class="toast" id="toast">✓ Done!</div>
-
+  <div class="toast" id="toast">
+   ✓ Done!
+  </div>
 <script>
 // ======= DATA =======
 const hospitals = [
