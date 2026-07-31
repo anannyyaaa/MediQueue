@@ -2164,14 +2164,27 @@ footer span{color:var(--olive);font-weight:500}
   </div>
   <script>
    // ======= DATA =======
-const hospitals = [
-  {id:'gtb', name:'GTB Hospital', crowd:'low', wait:20, patients:34, dist:2.1, depts:['OPD','Emergency','Paediatrics']},
-  {id:'safdarjung', name:'Safdarjung Hospital', crowd:'medium', wait:45, patients:87, dist:8.4, depts:['OPD','Trauma','ICU','Cardiology']},
-  {id:'aiims', name:'AIIMS Delhi', crowd:'high', wait:90, patients:212, dist:9.2, depts:['OPD','Cardiology','Oncology']},
-  {id:'lbs', name:'LBS Hospital', crowd:'low', wait:18, patients:28, dist:3.5, depts:['OPD','Orthopaedic']},
-  {id:'rml', name:'RML Hospital', crowd:'medium', wait:55, patients:103, dist:11.2, depts:['OPD','Neurology','Surgery']},
-  {id:'lnjp', name:'Lok Nayak Hospital', crowd:'high', wait:75, patients:178, dist:10.6, depts:['OPD','Emergency','Burns']},
-];
+let hospitals = [];
+
+async function loadHospitals() {
+  try {
+    const res = await fetch('http://localhost:5000/api/hospitals');
+    const data = await res.json();
+    hospitals = data.map(h => ({
+      id: h.id,
+      name: h.name,
+      crowd: h.crowdLevel.toLowerCase(),
+      wait: h.waitMinutes,
+      patients: h.totalBeds,
+      dist: 5.0,
+      depts: h.departments ? h.departments.split(',').map(d => d.trim()) : []
+    }));
+    renderHospitals(hospitals);
+  } catch (error) {
+    console.error('Failed to load hospitals:', error);
+    document.getElementById('hospitalGrid').innerHTML = '<p>Could not load hospitals. Is the server running?</p>';
+  }
+}
 
 const deptData = {
   gtb:[{n:'General OPD',w:20,c:'low'},{n:'Emergency',w:10,c:'low'},{n:'Paediatrics',w:25,c:'low'},{n:'Orthopaedic',w:35,c:'medium'},{n:'Dermatology',w:15,c:'low'}],
@@ -2387,7 +2400,7 @@ function showToast(msg) {
 
 // ======= INIT =======
 document.getElementById('searchInput').addEventListener('input', applyFilters);
-renderHospitals(hospitals);
+loadHospitals();
   </script>
  </body>
 </html>
